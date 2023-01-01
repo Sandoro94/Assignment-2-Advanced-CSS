@@ -1,0 +1,197 @@
+@mixin social-media($colour) {
+    color: $text-button-color;
+    width: 165px;
+    height: 35px;
+    transition-duration: 0.3s;
+    background: $colour;
+}
+@mixin flex-direction($direction) {
+    display: flex;
+    flex-direction: $direction
+}
+
+@mixin justify-center(){
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    @include flex-direction(column);
+    @include justify-center();
+    .text-container {
+        @include flex-direction(column);
+        @include justify-center();
+        width: 100%;
+        border-radius: 20px 20px 0px 0px;
+        background: $text-button-color;
+        max-width: 350px;
+        max-height: 1000px;
+        min-height: 500px;
+        padding: 40px 10px;
+        z-index: 1;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .avatar {
+        border: 10px solid white;
+        padding: 0%;
+        margin: 0%;
+        border-radius: 50%;
+        width: 175px;
+        height: 200px;
+        z-index: 2;
+        top: 460px;
+        position: absolute;
+    }
+
+    .testimonial {
+        @include flex-direction(column);
+        @include justify-center();
+        background-color: #686de0;
+        max-width: 350px;
+        width: 100%;
+        height: 250px;
+        border-radius: 0px 0px 20px 20px;
+        padding: 40px 10px;
+    }
+
+    h2 {
+        color: #fff;
+        size: relative;
+    }
+
+    h3 {
+        color: #c70636;
+        size: relative;
+    }
+
+    /*second assignment*/
+    .portfolio-grid {
+        display: block;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .grid-cell {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .avatar-grid {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .button-cell {
+        background-color: #686de0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        color: #fff;
+        left: 0;
+        top: 0;
+        position: absolute;
+        opacity: 0%;
+        transition-duration: 0.3s;
+    }
+
+    button {
+        border-radius: 10px;
+        left: 40%;
+        top: 50%;
+        position: absolute;
+        opacity: 100%;
+        transition-duration: 0.3s;
+    }
+
+    .grid-cell:hover .button-cell {
+        opacity: 100%;
+    }
+
+    /*third assignment: Social Media Buttons*/
+    .social-media-buttons {
+        display: flex;
+        z-index: 3;
+        font-size: 12px;
+        flex-direction: column;
+        position: fixed;
+        right: 10px;
+        bottom: 50%;
+        width: 20px;
+    }
+    
+    .social-media-buttons>.fa {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+    }
+    
+    .social-media-buttons>.fa::before {
+        padding-right: 10px;
+        font-size: 30px;
+    }
+    .fa-facebook {
+        @include social-media(#3B5998)
+    }
+    .fa-twitter {
+        @include social-media(#55ACEE)
+    }
+    .fa-linkedin {
+        @include social-media(#007bb5)
+    }
+    .fa-youtube {
+        @include social-media(#bb0000)
+    }
+    .social-media-text {
+        font-size: 16px;
+    }
+/*animations*/
+    .fa-facebook:hover {
+        transform: $animation;
+    }
+    
+    .fa-twitter:hover {
+        transform: $animation;
+    }
+    
+    .fa-linkedin:hover {
+        transform: $animation;
+    }
+    
+    .fa-youtube:hover {
+        transform: $animation;
+    }
+    
+    
+
+    /*Media Queries*/
+    @media screen and (min-width: 768px) {
+        .portfolio-grid {
+            display: -ms-grid;
+            display: grid;
+            position: relative;
+            -ms-grid-columns: 45% 45%;
+            grid-template-columns: 45% 45%;
+            -ms-grid-rows: 25% 25% 25% 25%;
+            grid-template-rows: 25% 25% 25% 25%;
+            -moz-column-gap: 10px;
+            column-gap: 10px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .portfolio-grid {
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 30% 30% 30%;
+            grid-template-columns: 30% 30% 30%;
+            -ms-grid-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+}

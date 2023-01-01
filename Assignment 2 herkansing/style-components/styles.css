@@ -1,0 +1,185 @@
+main, .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*second assignment*/
+  /*third assignment: Social Media Buttons*/
+  /*animations*/
+  /*Media Queries*/
+}
+main .text-container, .main .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  background: #fff;
+  max-width: 350px;
+  max-height: 1000px;
+  min-height: 500px;
+  padding: 40px 10px;
+  z-index: 1;
+}
+main p, .main p {
+  font-size: 20px;
+}
+main .avatar, .main .avatar {
+  border: 10px solid white;
+  padding: 0%;
+  margin: 0%;
+  border-radius: 50%;
+  width: 175px;
+  height: 200px;
+  z-index: 2;
+  top: 460px;
+  position: absolute;
+}
+main .testimonial, .main .testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #686de0;
+  max-width: 350px;
+  width: 100%;
+  height: 250px;
+  border-radius: 0px 0px 20px 20px;
+  padding: 40px 10px;
+}
+main h2, .main h2 {
+  color: #fff;
+  size: relative;
+}
+main h3, .main h3 {
+  color: #c70636;
+  size: relative;
+}
+main .portfolio-grid, .main .portfolio-grid {
+  display: block;
+  margin-top: 10px;
+  align-items: center;
+}
+main .grid-cell, .main .grid-cell {
+  position: relative;
+  margin-bottom: 10px;
+}
+main .avatar-grid, .main .avatar-grid {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+main .button-cell, .main .button-cell {
+  background-color: #686de0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  color: #fff;
+  left: 0;
+  top: 0;
+  position: absolute;
+  opacity: 0%;
+  transition-duration: 0.3s;
+}
+main button, .main button {
+  border-radius: 10px;
+  left: 40%;
+  top: 50%;
+  position: absolute;
+  opacity: 100%;
+  transition-duration: 0.3s;
+}
+main .grid-cell:hover .button-cell, .main .grid-cell:hover .button-cell {
+  opacity: 100%;
+}
+main .social-media-buttons, .main .social-media-buttons {
+  display: flex;
+  z-index: 3;
+  font-size: 12px;
+  flex-direction: column;
+  position: fixed;
+  right: 10px;
+  bottom: 50%;
+  width: 20px;
+}
+main .social-media-buttons > .fa, .main .social-media-buttons > .fa {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+main .social-media-buttons > .fa::before, .main .social-media-buttons > .fa::before {
+  padding-right: 10px;
+  font-size: 30px;
+}
+main .fa-facebook, .main .fa-facebook {
+  color: #fff;
+  width: 165px;
+  height: 35px;
+  transition-duration: 0.3s;
+  background: #3B5998;
+}
+main .fa-twitter, .main .fa-twitter {
+  color: #fff;
+  width: 165px;
+  height: 35px;
+  transition-duration: 0.3s;
+  background: #55ACEE;
+}
+main .fa-linkedin, .main .fa-linkedin {
+  color: #fff;
+  width: 165px;
+  height: 35px;
+  transition-duration: 0.3s;
+  background: #007bb5;
+}
+main .fa-youtube, .main .fa-youtube {
+  color: #fff;
+  width: 165px;
+  height: 35px;
+  transition-duration: 0.3s;
+  background: #bb0000;
+}
+main .social-media-text, .main .social-media-text {
+  font-size: 16px;
+}
+main .fa-facebook:hover, .main .fa-facebook:hover {
+  transform: translateX(-145px);
+}
+main .fa-twitter:hover, .main .fa-twitter:hover {
+  transform: translateX(-145px);
+}
+main .fa-linkedin:hover, .main .fa-linkedin:hover {
+  transform: translateX(-145px);
+}
+main .fa-youtube:hover, .main .fa-youtube:hover {
+  transform: translateX(-145px);
+}
+@media screen and (min-width: 768px) {
+  main .portfolio-grid, .main .portfolio-grid {
+    display: -ms-grid;
+    display: grid;
+    position: relative;
+    -ms-grid-columns: 45% 45%;
+    grid-template-columns: 45% 45%;
+    -ms-grid-rows: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .portfolio-grid, .main .portfolio-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+body {
+  background-color: #c3cfe2;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,10 @@
+@import './variables';
+@import './main';
+
+body {
+    background-color: #c3cfe2;
+}
+
+.main{
+    @extend main;
+}
